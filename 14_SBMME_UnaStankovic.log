@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.2.25)  27 APR 2018 13:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.2.25)  5 MAY 2018 13:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -632,24 +632,24 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 15.
 (./14_SBMME_UnaStankovic.aux)
 \openout1 = `14_SBMME_UnaStankovic.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -680,7 +680,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box27
-Package hyperref Info: Link coloring ON on input line 20.
+Package hyperref Info: Link coloring ON on input line 21.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -690,140 +690,164 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count106
 )
-LaTeX Info: Redefining \ref on input line 20.
-LaTeX Info: Redefining \pageref on input line 20.
-LaTeX Info: Redefining \nameref on input line 20.
+LaTeX Info: Redefining \ref on input line 21.
+LaTeX Info: Redefining \pageref on input line 21.
+LaTeX Info: Redefining \nameref on input line 21.
 
 (./14_SBMME_UnaStankovic.out) (./14_SBMME_UnaStankovic.out)
 \@outlinefile=\write3
 \openout3 = `14_SBMME_UnaStankovic.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 27.
+(Font)              <12> on input line 28.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 27.
+(Font)              <8> on input line 28.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 27.
+(Font)              <6> on input line 28.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 29.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 29.
 
 
-LaTeX Warning: Citation `paper' on page 1 undefined on input line 28.
+LaTeX Warning: Citation `paper' on page 1 undefined on input line 29.
 
-[1
+(./14_SBMME_UnaStankovic.toc)
+\tf@toc=\write4
+\openout4 = `14_SBMME_UnaStankovic.toc'.
+
+ [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 37.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 39.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 37.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
 
 
-LaTeX Warning: Citation `execbio' on page 2 undefined on input line 40.
+LaTeX Warning: Citation `execbio' on page 2 undefined on input line 42.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 42.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 42.
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
+Underfull \hbox (badness 10000) in paragraph at lines 42--45
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--48
+Underfull \hbox (badness 10000) in paragraph at lines 42--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
 [2]
+Underfull \hbox (badness 10000) in paragraph at lines 52--54
 
-LaTeX Warning: Citation `haltingproblem' on page 3 undefined on input line 50.
-
-
-LaTeX Warning: Citation `gcc' on page 3 undefined on input line 54.
+ []
 
 
-LaTeX Warning: Citation `laski2009software' on page 3 undefined on input line 5
-8.
+Underfull \hbox (badness 10000) in paragraph at lines 64--66
 
-LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 62.
+ []
 
-(/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
-File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
+[3]
+Overfull \hbox (7.63565pt too wide) in paragraph at lines 82--83
+[]\T2A/cmr/m/n/9 Jezik do-zvo-ljava pa-ra-me-tri-za-ciju pona^^Gsanja ^^Acelijs
+kih kom-po-nenti i na^^Gcina
+ []
 
-LaTeX Warning: File `panda.jpg' not found on input line 105.
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 97--101
+
+ []
 
 
-! Package pdftex.def Error: File `panda.jpg' not found.
+Underfull \hbox (badness 10000) in paragraph at lines 107--110
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.105 \includegraphics[scale=0.75]{panda.jpg}
-                                             
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+ []
+
+<solverarchitecture.png, id=91, 469.755pt x 272.01625pt>
+File: solverarchitecture.png Graphic file (type png)
+
+<use solverarchitecture.png>
+Package pdftex.def Info: solverarchitecture.png used on input line 120.
+(pdftex.def)             Requested size: 352.31538pt x 204.01167pt.
+
+Overfull \hbox (7.31538pt too wide) in paragraph at lines 120--121
+ [] 
+ []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 119.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3] [4]
-No file 14_SBMME_UnaStankovic.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 258.
 [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 258.
+Overfull \hbox (0.48045pt too wide) in paragraph at lines 137--138
+[]\T2A/cmr/m/n/9 Treba ista^^Aci da je do-pri-nos rada opi-sa-nog na pret-hod-n
+ih ne-ko-liko strana
+ []
+
+
+Overfull \hbox (11.39934pt too wide) in paragraph at lines 137--138
+\T2A/cmr/m/n/9 ve-oma zna^^Gcajan iz aspekta ek-spe-ri-men-talne i izvr^^Gsive 
+bio-lo-gije, jer omogu^^Acava
+ []
+
+No file 14_SBMME_UnaStankovic.bbl.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 146.
+[6 <./solverarchitecture.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
  (./14_SBMME_UnaStankovic.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 258.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 258.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 146.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
+Package rerunfilecheck Info: File `14_SBMME_UnaStankovic.out' has not changed.
+(rerunfilecheck)             Checksum: FE8E6AA8534497DB2BC093864932EDFC;1620.
 
-
-Package rerunfilecheck Warning: File `14_SBMME_UnaStankovic.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `14_SBMME_UnaStankovic.out':
-(rerunfilecheck)             Before: B024BDE469A1C0D9515B8A3B56C8C57B;1524
-(rerunfilecheck)             After:  0CC8AA4355FCA5F09FFA852265272D98;1632.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 258.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
  ) 
 Here is how much of TeX's memory you used:
- 9624 strings out of 493304
- 132057 string characters out of 6139871
- 205239 words of memory out of 5000000
- 12970 multiletter control sequences out of 15000+600000
- 15596 words of font info for 38 fonts, out of 8000000 for 9000
+ 9589 strings out of 493304
+ 131299 string characters out of 6139871
+ 204937 words of memory out of 5000000
+ 12937 multiletter control sequences out of 15000+600000
+ 14976 words of font info for 36 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 29i,8n,28p,1093b,350s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,8n,28p,1372b,409s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf/fonts/type1/public/cm
--super/sfbx0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sfti0900.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sftt0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on 14_SBMME_UnaStankovic.pdf (5 pages, 219712 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></
+usr/share/texmf/fonts/type1/public/cm-super/sfbx0900.pfb></usr/share/texmf/font
+s/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-su
+per/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb></u
+sr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts
+/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-sup
+er/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti0900.pfb>
+Output written on 14_SBMME_UnaStankovic.pdf (6 pages, 252074 bytes).
 PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
+ 176 PDF objects out of 1000 (max. 8388607)
+ 148 compressed objects within 2 object streams
  28 named destinations out of 1000 (max. 500000)
- 113 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 94 words of extra memory for PDF output out of 10000 (max. 10000000)
 
