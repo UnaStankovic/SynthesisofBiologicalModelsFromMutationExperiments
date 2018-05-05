@@ -37,17 +37,19 @@ Računarsko modelovanje bioloških sistema postaje sve popularnije sa pokušajim
 Razlikuju se dva tipa bioloških problema, u zavisnosti od njihove reprezentacije i potencijala:
 \begin{itemize}
 \item matematički i
-\item računarski
+\item računarski.
 \end{itemize} 
-Pristup, u kome od biloških sistema konstruišemo računarske modele, nazivamo "izvršivom biologijom" pošto se ona fokusira na dizajn algoritama, koji imitiraju biološke fenomene, a mogu da se izvršavaju na računaru.\cite{execbio} \\\\
+Pristup u kome od biloških sistema konstruišemo računarske modele nazivamo $"$izvršivom biologijom$"$, pošto se ona fokusira na dizajn algoritama koji imitiraju biološke fenomene, a mogu da se izvršavaju na računaru.\cite{execbio} \\\\
 Izvršiva biologija predstavlja novi izazov formalnim metodama.
-Naime, javljaju se dva problema sa kojima se susreću biolozi koji se bave ćelijama kada razvijaju modele koji mogu da se analiziraju formalno.\\ Prvi se odnosi na automatsko sintetizovanje konkurentnog $"$in silico$"$ modela (onog koji se izvršava na računaru) za razvoj ćelija sa datim $"$in vivo$"$ eksperimentima (onima koji koriste žive jedinke) u kojima se ispituje kako određene mutacije utiču na ishod eksperimenta. Problem leži u tome što je sinteza, koja se vrši pod mutacijama, jedinstvena, jer mutacije mogu proizvesti nedeterminističke ishode i sintetizovani model mora biti u stanju da ponovi sve te ishode sa ciljem da verno opiše modelovane ćelijske procese. Suprotno tome, običan konkurentni program je korektan ako bira bilo koji ishod koji je predviđen nedeterminističkom specifikacijom. \\
-Drugi se odnosi na problem nedovoljno ograničene specifikacije koji se javlja zbog nepotpunosti setova mutacijskih eksperimenata. Nedovoljno ograničena specifikacija prouzrokuje veći broj različitih modela, koji na različite načine objašnjavaju iste fenomene. Problem ovakve specifikacije odgovara problemu analize prostora zadovoljivih modela. U radu su razvijeni algoritmi koji otkrivaju dvosmislenosti u specifikaciji i uklanjaju redundantnost iz specifikacije, odnosno, kreiraju minimalnu nedvosmislenu specifikaciju.
+Naime, javljaju se dva problema sa kojima se susreću biolozi koji se bave ćelijama kada razvijaju modele koji mogu da se analiziraju formalno.\\\\
+
+Prvi se odnosi na automatsko sintetizovanje konkurentnog $"$in silico$"$ modela (onog koji se izvršava na računaru) za razvoj ćelija sa datim $"$in vivo$"$ eksperimentima (onima koji koriste žive jedinke) u kojima se ispituje kako određene mutacije utiču na ishod eksperimenta. Problem leži u tome što je sinteza, koja se vrši pod mutacijama, jedinstvena, jer mutacije mogu proizvesti nedeterminističke ishode i sintetizovani model mora biti u stanju da ponovi sve te ishode sa ciljem da verno opiše modelovane ćelijske procese. Suprotno tome, običan konkurentni program je korektan ako bira bilo koji ishod koji je predviđen nedeterminističkom specifikacijom. \\
+Drugi se odnosi na problem nedovoljno ograničene specifikacije koji se javlja zbog nepotpunosti skupova mutacijskih eksperimenata. Nedovoljno ograničena specifikacija prouzrokuje veći broj različitih modela, koji na različite načine objašnjavaju iste fenomene. Problem ovakve specifikacije odgovara problemu analize prostora zadovoljivih modela. 
 
 \subsection{Motivacija}
-Bolesti mogu biti uzrokovane izmenama na genu ili mrežama za regulaciju proteina. Uzmimo za primer bolest X koja je usko povezana sa nivoima nekih proteina, na primer, P i R, gde P može negativno regulisati nivo proteina R. Ako bi se desilo da nivo proteina P opadne, došlo bi do povećanja nivoa proteina R što bi mogao biti okidač za bolest X. Da bi se to izbeglo trebalo bi povećati nivo proteina R. Da bi bilo moguće izmeniti mreže regulacije proteina trebalo bi izvesti mutacioni eksperiment, u kome bi ćelije bile genetski modifikovane kako bi se smanjila ili povećala aktivnost određenog proteina. Kao posledica toga ćelija ispoljava abnormalno ponašanje, kao na primer nekontrolisanu deobu. Ako bi, umanjenjem aktivnosti proteina P, rezultujući fenotip ispoljio povećanu aktivnost proteina R, onda bi bilo moguće zaključiti da P negativno reguliše R. Iz ogromnog broja ovakvih eksperimenata biolozi dolaze do zaključaka i kreiraju regulatorne mreže koje opisuju posledice događaja koji dovode do određenih ćelijskih ponašanja i sudbina. Najpoznatiji primer kod kojih izmene dovode do bolesti je rak. Rak predstavlja grešku u regulaciji rasta tkiva kod kog su ćelije ispoljile izmenjeno ponašanje, odnosno, došlo je do izmene na genima koji regulišu rast ćelija.\\\\
+Bolesti mogu biti uzrokovane izmenama na genu ili mrežama za regulaciju proteina. Uzmimo za primer bolest $X$ koja je usko povezana sa nivoima nekih proteina, na primer, $P$ i $R$, gde $P$ može negativno regulisati nivo proteina $R$. Ako bi se desilo da nivo proteina $P$ opadne, došlo bi do povećanja nivoa proteina $R$ što bi mogao biti okidač za bolest $X$. Da bi se to izbeglo trebalo bi povećati nivo proteina $R$. Da bi bilo moguće izmeniti mreže regulacije proteina trebalo bi izvesti mutacijski eksperiment, u kome bi ćelije bile genetski modifikovane kako bi se smanjila ili povećala aktivnost određenog proteina. Kao posledica toga ćelija ispoljava abnormalno ponašanje, kao na primer nekontrolisanu deobu. Ako bi, umanjenjem aktivnosti proteina $P$, rezultujući fenotip ispoljio povećanu aktivnost proteina $R$, onda bi bilo moguće zaključiti da $P$ negativno reguliše $R$. Iz ogromnog broja ovakvih eksperimenata biolozi dolaze do zaključaka i kreiraju regulatorne mreže koje opisuju posledice događaja koji dovode do određenih ćelijskih ponašanja i sudbina. Najpoznatiji primer kod kojih izmene dovode do bolesti je rak. Rak predstavlja grešku u regulaciji rasta tkiva kod kog su ćelije ispoljile izmenjeno ponašanje, odnosno, došlo je do izmene na genima koji regulišu rast ćelija.\\\\
 
-Upravo kao posledica svega navedenog, eksperimentalnim biolozima je bitna korektnost modela koje kreiraju kao i detaljno objašenjenje kako je došlo do određenih ishoda. Izvršiva biologija se upravo bavi ovakvim problemima, kreiranjem izvršivih modela koji bi bili proverivi nad izvršenim eksperimentima. Tretiranje ćelija kao konkurentnih agenata modeluje činjenicu da ćelije ne evoluiraju istovremeno. Verifikacija obezbeđuje da je konkurentni model korektan za sve varijacije rasta ćelija, ispitivanjem svih mogućih izvršavanja modela.
+Upravo kao posledica svega navedenog, eksperimentalnim biolozima je bitna korektnost modela koje kreiraju kao i detaljno objašenjenje kako je došlo do određenih ishoda. Izvršiva biologija se bavi baš ovakvim problemima, kreiranjem izvršivih modela koji bi bili proverivi nad izvršenim eksperimentima. Tretiranje ćelija kao konkurentnih agenata modeluje činjenicu da ćelije ne evoluiraju istovremeno. Verifikacija obezbeđuje da je konkurentni model korektan za sve varijacije rasta ćelija, ispitivanjem svih mogućih izvršavanja modela.\\\\
 Jedan od glavnih ciljeva eksperimentalne biologije je da stvori izvršive modele koji bi omogućili posmatranje dinamičnih bioloških sistema, koji bi bili potvrđeni kroz eksperimente. Da bi se transformisao neformalni model u izvršni moraju se modelovati:
 \begin{itemize}
 \item nivoi proteina,
@@ -55,29 +57,29 @@ Jedan od glavnih ciljeva eksperimentalne biologije je da stvori izvršive modele
 \item ponašanje proteina kada su aktivni i aktivatorski i inhibitorski protein.
 \end{itemize}
 
-Mutacioni eksperimenti proizvode različite ishode kada se izvršavaju više puta. Korektan model bi morao da reprodukuje sve nedetrminističke ishode eksperimenta. Korišćenjem vezane asinhronizacije postiže se efekat da sve susedne ćelije uvek napreduju na sličan način, ali ne u potpunosti istovremeno. 
+Mutacijski eksperimenti proizvode različite ishode kada se izvršavaju više puta. Korektan model bi morao da reprodukuje sve nedetrminističke ishode eksperimenta. Korišćenjem vezane asinhronizacije postiže se efekat da sve susedne ćelije uvek napreduju na sličan način, ali ne u potpunosti istovremeno. 
 
 \section{Jezik}
 \subsection{Jezik za modelovanje}
-Jezik koji služi za modelovanje opisanih fenomena je model visokog nivoa, SBL, koji uvodi abstrakcije ćelija, ćelijskih komponenti i interakcija između njih. \\
-Programi u SBL-u se sastoje iz ćelija, koje se izvršavaju prema određenom rasporedu $s$ koji koristi vezanu asinhronizaciju. Ćelije se sastoje iz komponenti, koje modeluju ili proteine ili receptore ćelija. Komponente jedne ćelije su u potpunosti sinhronizovane, međusobno komuniciraju na nivou jedne ili više ćelija i povezane su usmerenim granama, koje odgovaraju aktivacionim ili inhibitorskim vezama. Osim navedenog, komponente imaju stanje, koje se menja na osnovu stanja te komponente i stanja njenih aktivatora i inhibitora. Svaka komponenta ima, dakle, i funkciju promene stanja $(L, L^k) \longrightarrow L$, gde su $L$ nivoi, a $k$ broj aktivatora i inhibitora komponenti. 
+Jezik koji služi za modelovanje opisanih fenomena je jezik visokog nivoa, SBL, koji uvodi apstrakcije ćelija, ćelijskih komponenti i interakcija između njih. \\\\
+Programi u SBL-u se sastoje iz ćelija, koje se izvršavaju prema određenom rasporedu $s$, koji koristi vezanu asinhronizaciju. Ćelije se sastoje iz komponenti, koje modeluju ili proteine ili receptore ćelija. Komponente jedne ćelije su u potpunosti sinhronizovane, međusobno komuniciraju na nivou jedne ili više ćelija i povezane su usmerenim granama, koje odgovaraju aktivacionim ili inhibitorskim vezama. Osim navedenog, komponente imaju stanje, koje se menja na osnovu stanja te komponente i stanja njenih aktivatora i inhibitora. Svaka komponenta ima, dakle, i funkciju promene stanja $(L, L^k) \rightarrow L$, gde su $L$ nivoi, a $k$ broj aktivatora i inhibitora komponenti. 
 
 \subsection{Dodaci jeziku za verifikaciju}
-Skup mutacionih eksperimenata koji su izvedeni u laboratoriji služe za proveru korektnosti specifikacije. Sada, treba definisati određene pojmove:
+Skup mutacijskih eksperimenata koji su izvedeni u laboratoriji služe za proveru korektnosti specifikacije. Sada, treba definisati određene pojmove:
 \begin{itemize}
 \item $F$ je skup mogućih ishoda eksperimenta.
 \item $M$ je skup mutacija koje je moguće primeniti na ćeliju (obično su sve ćelije u eksperimentu isto mutirane). Ovaj skup raste eksponencijalno sa brojem komponenti ćelije, zbog čega biolozi ne izvode sve mutacije.
 \item $Exp$ je skup eksperimenata, koji predstavlja podskup od $M \times F$, gde $(m,f) \in Exp$ ako je neki ishod $f$ uočen na mutaciji $m$. Pošto je skup eksperimenata nepotpun i specifikacija je nepotpuna. Zbog toga, pretpostavka, da kada je jednom izvršena mutacija laboratorija je proverila sve moguće ishode ponavljajući eksperiment dovoljan broj puta, nam omogućava da imamo gornju granicu za specifikaciju i da sintetizujemo i pozitivne(oni ishodi koje model mora proizvesti) i negativne primere(oni ishodi koji se nikad ne smeju uzeti za eksperiment).
-\item Specifikacija je mapa $E: M \longrightarrow 2^F$, čiji je domen skup izvedenih mutacija. Ako je $m \in dom(E) \and f \notin E(m)$ pretpostavljamo da $m$ neće imati sudbinu $f$, tj. par $(m,f)$ je negativan primer.
-\item Program $P: M \longrightarrow F$ je korektan model za $E$ ako se za svako $m \in dom(E)$ izvršavanjem programa $P$ dobija svaki element iz $E(m)$ kontrolisanjem rasporeda koji utiče na konkurentno izvršavanje ćelija u programu.
+\item Specifikacija je mapa $E: M \rightarrow 2^F$, čiji je domen skup izvedenih mutacija. Ako je $m \in dom(E) \land f \notin E(m)$ pretpostavljamo da $m$ neće imati sudbinu $f$, tj. par $(m,f)$ je negativan primer.
+\item Program $P: M \rightarrow F$ je korektan model za $E$ ako se za svako $m \in dom(E)$ izvršavanjem programa $P$ dobija svaki element iz $E(m)$ kontrolisanjem rasporeda koji utiče na konkurentno izvršavanje ćelija u programu.
 \end{itemize}
-Da bi se definisao uslov korektnosti, program se mora posmatrati kao funkcija $P: (M,S) \rightarrow F$, gde su $M$ i $F$ domeni mutacija i sudbina ćelija,a $S$ predstavlja skup rasporeda koji koristi vezanu asinhronizaciju. Uslov korektnosti $correct(P,E)$ programa $P$ za specifikaciju $E: M \rightarrow 2^F$ ima dva dela:
+Da bi se definisao uslov korektnosti, program se mora posmatrati kao funkcija $P: (M,S) \rightarrow F$, gde su $M$ i $F$ domeni mutacija i sudbina ćelija,a $S$ predstavlja skup rasporeda koji koristi vezanu asinhronizaciju. Uslov korektnosti $correct(P,E)$ programa $P$, za specifikaciju $E: M \rightarrow 2^F$ ima dva dela:
 \begin{enumerate}
-\item demonsko raspoređivaje - ovakav vid rasporeda ne može proizvesti ishod koji je van specifikacije,
-\item anđeosko raspoređivanje - ovakav vid rasporeda mora proizvesti svaki ishod iz specifikacije.
+\item demonsko raspoređivaje - ovakav vid rasporeda ne može proizvesti ishod koji je van specifikacije, $demonic(P) = \forall m \in dom(E). \forall s \in S : P(m,s) \in E(m)$, 
+\item anđeosko raspoređivanje - ovakav vid rasporeda mora proizvesti svaki ishod iz specifikacije, $angelic(P) = \forall m \in dom(E). \forall f \in E(m). \exists s \in S: P(m,s) = f$.
 \end{enumerate}
 \subsection{Dodaci jeziku za sintezu}
-Jezik dozvoljava parametrizaciju ponašanja ćelijskih komponenti i načina njihove komunikacije. Korektan model mora reprodukovati sve uočene eksperimente, što je obuhvaćeno anđeoskim uslovom korektnosti, koji predstavlja formulu sa dva nivoa kvantifikacije(2NK). Iz toga sledi da je problem sinteze formula sa tri nivoa kvantifikacije(3NK). Formule koje su višeg nivoa kvantifikacije od 1 ne mogu se dati direktno SMT rešavaču na analizu. Kao posledica navedenog, autori su razvili dvokoračni CEGIS (engl. counterexample-guided inductive synthesis) algoritam, u kom sintetizer komunicira sa dva proverivača korektnosti (za anđeoski i demonski uslov).
+Jezik dozvoljava parametrizaciju ponašanja ćelijskih komponenti i načina njihove komunikacije. Korektan model mora reprodukovati sve uočene eksperimente, što je obuhvaćeno anđeoskim uslovom korektnosti, koji predstavlja formulu sa dva nivoa kvantifikacije(2NK). Iz toga sledi da je problem sinteze formula sa tri nivoa kvantifikacije(3NK). Formule koje su višeg nivoa kvantifikacije od 1 ne mogu se dati direktno SMT rešavaču na analizu. Kao posledica navedenog, autori su razvili dvokoračni CEGIS (engl. counterexample-guided inductive synthesis) algoritam, u kom sintetizer komunicira sa dva verifikatora korektnosti $V_a$ i $V_d$ (za anđeoski i demonski uslov).
 
 \section{Sinteza i ispitivanje prostora modela}
 Uslov korektnosti je definisan kao 
@@ -85,7 +87,7 @@ Uslov korektnosti je definisan kao
 correct(P) = demonic(P) \land angelic(P)
 \end{equation}
 Korektnost utvrđujemo odvojeno za $demonic(P)$ i $angelic(P)$ pomoću verifikatora $V_d$ i $V_a$.\\
-Kod demonskih rasporeda formula $demonic(P)$ tvrdi da je skup $E(m)$ gornja granica za sve ishode $P$ sa ulazom $m$:
+\textit{Kod demonskih rasporeda} formula $demonic(P)$ tvrdi da je skup $E(m)$ gornja granica za sve ishode $P$ sa ulazom $m$:
 \begin{equation}
 demonic(P) = \forall m \in dom(E). \forall s \in S. P(m,s) \in E(m)
 \end{equation}
@@ -94,7 +96,7 @@ Da bi se ovaj uslov proverio, mora se oboriti traženjem demonskog rasporeda tak
 \vee_{m \in dom(E)} \exists s. \bigwedge_{f \in E(m)} P(m,s) \neq f
 \end{equation}
 Ako je ova formula zadovoljiva, $P$ ne zadovoljava demonski uslov i dobijamo konkretan kontraprimer $(m,s)$. Ako je nezadovoljiva, onda $P$ zadovoljava demonski uslov.\\\\
-Kod anđeoskih rasporeda, anđeoski uslov kaže da svi ishodi u skupu koji $m$
+\textit{Kod anđeoskih rasporeda}, anđeoski uslov kaže da svi ishodi u skupu koji $m$
 mapira moraju se pojaviti u nekom izvršavanju $P$ nad $m$:
 \begin{equation}
 angelic(P) = \forall m \in dom(E), f \in E(m), \exists s.P(m,s) = f
@@ -122,7 +124,7 @@ Navedena formula je u 3NK, da bismo je rešili koristimo CEGIS algoritam koji 3N
 \end{figure}
 
 \subsection{Upiti za analizu dvosmislenosti}
-Nakon što je rešen problem sintetizovanja programa, potrebno je ispitati prostore mogućih modela. Ako je specifikacija nedovoljno precizna, teži se ka smanjenju dvosmislenosti proširivanjem specifikacije. Ako je specifikacija previše precizna, cilj je smanjiti specifikaciju bez stvaranja dvosmislenosti.\\\\
+Nakon što je rešen problem sintetizovanja programa, potrebno je ispitati prostore mogućih modela. Ako je specifikacija nedovoljno precizna, teži se ka smanjenju dvosmislenosti proširivanjem specifikacije. Ako je specifikacija previše precizna, cilj je smanjiti specifikaciju bez stvaranja dvosmislenosti.
 
 Skup objedinjenih ishoda programa, u oznaci $P[m]$, je skup ishoda programa $P$ nad mutacijom $m$ za sve rasporede $s$. Da bismo dobili ovakav skup, najpre, kreiramo ishod programa $P$ nad $m$ za inicijalni raspored $s$. Potom, uvećavamo skup uočenih ishoda $Obs$ traženjem rasporeda takvog, da program proizvodi do sada neviđeni ishod. Svaki korak algoritma doprinosi uvećanju skupa $Obs$ rešavanjem naredne formule:
 \begin{equation}
@@ -132,8 +134,7 @@ Ako je ova formula zadovoljiva, dobili smo ishod koji možemo dodati u $Obs$, a 
 
 \section{Zaključak}
 \label{sec:zakljucak}
-Treba istaći da je doprinos rada opisanog na prethodnih nekoliko strana veoma značajan iz aspekta eksperimentalne i izvršive biologije, jer omogućava biolozima, da na relativno brz, jednostavan i, najvažnije, pouzdan i proveriv, način ispitaju prostor mogućih ishoda željenih eksperimente.
-
+Treba istaći da je doprinos rada opisanog na prethodnih nekoliko strana veoma značajan iz aspekta eksperimentalne i izvršive biologije, jer omogućava biolozima, da na relativno brz, jednostavan i, najvažnije, pouzdan i proveriv, način ispitaju prostor mogućih ishoda željenih eksperimente. U samom radu su razvijeni algoritmi koji otkrivaju dvosmislenosti u specifikaciji i uklanjaju redundantnost iz specifikacije, odnosno, kreiraju minimalnu nedvosmislenu specifikaciju.
 
 \addcontentsline{toc}{section}{Literatura}
 \appendix
