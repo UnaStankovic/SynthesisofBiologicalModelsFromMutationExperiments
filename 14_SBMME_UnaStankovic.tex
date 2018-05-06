@@ -49,7 +49,7 @@ Drugi se odnosi na problem nedovoljno ograničene specifikacije koji se javlja z
 \subsection{Motivacija}
 Bolesti mogu biti uzrokovane izmenama na genu ili mrežama za regulaciju proteina. Uzmimo za primer bolest $X$ koja je usko povezana sa nivoima nekih proteina, na primer, $P$ i $R$, gde $P$ može negativno regulisati nivo proteina $R$. Ako bi se desilo da nivo proteina $P$ opadne, došlo bi do povećanja nivoa proteina $R$ što bi mogao biti okidač za bolest $X$. Da bi se to izbeglo trebalo bi povećati nivo proteina $R$. Da bi bilo moguće izmeniti mreže regulacije proteina trebalo bi izvesti mutacijski eksperiment, u kome bi ćelije bile genetski modifikovane kako bi se smanjila ili povećala aktivnost određenog proteina. Kao posledica toga ćelija ispoljava abnormalno ponašanje, kao na primer nekontrolisanu deobu. Ako bi, umanjenjem aktivnosti proteina $P$, rezultujući fenotip ispoljio povećanu aktivnost proteina $R$, onda bi bilo moguće zaključiti da $P$ negativno reguliše $R$. Iz ogromnog broja ovakvih eksperimenata biolozi dolaze do zaključaka i kreiraju regulatorne mreže koje opisuju posledice događaja koji dovode do određenih ćelijskih ponašanja i sudbina. Najpoznatiji primer kod kojih izmene dovode do bolesti je rak. Rak predstavlja grešku u regulaciji rasta tkiva kod kog su ćelije ispoljile izmenjeno ponašanje, odnosno, došlo je do izmene na genima koji regulišu rast ćelija.\\\\
 
-Upravo kao posledica svega navedenog, eksperimentalnim biolozima je bitna korektnost modela koje kreiraju kao i detaljno objašenjenje kako je došlo do određenih ishoda. Izvršiva biologija se bavi baš ovakvim problemima, kreiranjem izvršivih modela koji bi bili proverivi nad izvršenim eksperimentima. Tretiranje ćelija kao konkurentnih agenata modeluje činjenicu da ćelije ne evoluiraju istovremeno. Verifikacija obezbeđuje da je konkurentni model korektan za sve varijacije rasta ćelija, ispitivanjem svih mogućih izvršavanja modela.\\\\
+Upravo kao posledica svega navedenog, eksperimentalnim biolozima je bitna korektnost modela koje kreiraju kao i detaljno objašnjenje kako je došlo do određenih ishoda. Izvršiva biologija se bavi baš ovakvim problemima, kreiranjem izvršivih modela koji bi bili proverivi nad izvršenim eksperimentima. Tretiranje ćelija kao konkurentnih agenata modeluje činjenicu da ćelije ne evoluiraju istovremeno. Verifikacija obezbeđuje da je konkurentni model korektan za sve varijacije rasta ćelija, ispitivanjem svih mogućih izvršavanja modela.\\\\
 Jedan od glavnih ciljeva eksperimentalne biologije je da stvori izvršive modele koji bi omogućili posmatranje dinamičnih bioloških sistema, koji bi bili potvrđeni kroz eksperimente. Da bi se transformisao neformalni model u izvršni moraju se modelovati:
 \begin{itemize}
 \item nivoi proteina,
@@ -73,7 +73,7 @@ Skup mutacijskih eksperimenata koji su izvedeni u laboratoriji služe za proveru
 \item Specifikacija je mapa $E: M \rightarrow 2^F$, čiji je domen skup izvedenih mutacija. Ako je $m \in dom(E) \land f \notin E(m)$ pretpostavljamo da $m$ neće imati sudbinu $f$, tj. par $(m,f)$ je negativan primer.
 \item Program $P: M \rightarrow F$ je korektan model za $E$ ako se za svako $m \in dom(E)$ izvršavanjem programa $P$ dobija svaki element iz $E(m)$ kontrolisanjem rasporeda koji utiče na konkurentno izvršavanje ćelija u programu.
 \end{itemize}
-Da bi se definisao uslov korektnosti, program se mora posmatrati kao funkcija $P: (M,S) \rightarrow F$, gde su $M$ i $F$ domeni mutacija i sudbina ćelija,a $S$ predstavlja skup rasporeda koji koristi vezanu asinhronizaciju. Uslov korektnosti $correct(P,E)$ programa $P$, za specifikaciju $E: M \rightarrow 2^F$ ima dva dela:
+Da bi se definisao uslov korektnosti, program se mora posmatrati kao funkcija $P: (M,S) \rightarrow F$, gde su $M$ i $F$ domeni mutacija i sudbina ćelija, a $S$ predstavlja skup rasporeda koji koristi vezanu asinhronizaciju. Uslov korektnosti $correct(P,E)$ programa $P$, za specifikaciju $E: M \rightarrow 2^F$ ima dva dela:
 \begin{enumerate}
 \item demonsko raspoređivaje - ovakav vid rasporeda ne može proizvesti ishod koji je van specifikacije, $demonic(P) = \forall m \in dom(E). \forall s \in S : P(m,s) \in E(m)$, 
 \item anđeosko raspoređivanje - ovakav vid rasporeda mora proizvesti svaki ishod iz specifikacije, $angelic(P) = \forall m \in dom(E). \forall f \in E(m). \exists s \in S: P(m,s) = f$.
@@ -96,12 +96,12 @@ Da bi se ovaj uslov proverio, mora se oboriti traženjem demonskog rasporeda tak
 \vee_{m \in dom(E)} \exists s. \bigwedge_{f \in E(m)} P(m,s) \neq f
 \end{equation}
 Ako je ova formula zadovoljiva, $P$ ne zadovoljava demonski uslov i dobijamo konkretan kontraprimer $(m,s)$. Ako je nezadovoljiva, onda $P$ zadovoljava demonski uslov.\\\\
-\textit{Kod anđeoskih rasporeda}, anđeoski uslov kaže da svi ishodi u skupu koji $m$
-mapira moraju se pojaviti u nekom izvršavanju $P$ nad $m$:
+\textit{Kod anđeoskih rasporeda}, anđeoski uslov kaže da se svi ishodi u skupu koje $m$
+mapira moraju pojaviti u nekom izvršavanju $P$ nad $m$:
 \begin{equation}
 angelic(P) = \forall m \in dom(E), f \in E(m), \exists s.P(m,s) = f
 \end{equation}
-Ovo se zapravo svodi na traženje anđeoskog rasporeda za svako $f \in E(m)$. Da bi se problem u 2NK svelo na efikasno resiv 1NK problem moramo, pod pretpostavkom da je $dom(E)$ mali, ispitati naredni upit:
+Ovo se zapravo svodi na traženje anđeoskog rasporeda za svako $f \in E(m)$. Da bi se problem u 2NK sveo na efikasno resiv 1NK problem moramo, pod pretpostavkom da je $dom(E)$ mali, ispitati naredni upit:
 \begin{equation}
 \forall m \in dom(E); \forall f \in E(m). \exists s.P(m,s) = f
 \end{equation}
